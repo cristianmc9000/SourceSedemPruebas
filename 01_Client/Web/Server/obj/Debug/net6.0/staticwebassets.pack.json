@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Server.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Server.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\images\\imagen-1.png",
+      "PackagePath": "staticwebassets\\images\\imagen-1.png"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\svg\\empresas.svg",
+      "PackagePath": "staticwebassets\\svg\\empresas.svg"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\svg\\icovectorsedem.svg",
+      "PackagePath": "staticwebassets\\svg\\icovectorsedem.svg"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\svg\\lock-black-48dp.svg",
+      "PackagePath": "staticwebassets\\svg\\lock-black-48dp.svg"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\svg\\log_subsidio.svg",
+      "PackagePath": "staticwebassets\\svg\\log_subsidio.svg"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\svg\\logo_sedem.svg",
+      "PackagePath": "staticwebassets\\svg\\logo_sedem.svg"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\svg\\logosedemministerio.svg",
+      "PackagePath": "staticwebassets\\svg\\logosedemministerio.svg"
+    },
+    {
+      "Id": "C:\\Users\\Winter\\source\\repos\\SourceSedemPruebas\\01_Client\\Web\\Server\\wwwroot\\svg\\logosubsidio.svg",
+      "PackagePath": "staticwebassets\\svg\\logosubsidio.svg"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Server.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.Server.props",
+      "PackagePath": "build\\Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.Server.props",
+      "PackagePath": "buildMultiTargeting\\Server.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.Server.props",
+      "PackagePath": "buildTransitive\\Server.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

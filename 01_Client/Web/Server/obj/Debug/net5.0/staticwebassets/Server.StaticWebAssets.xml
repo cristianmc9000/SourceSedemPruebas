@@ -1,0 +1,7 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="D:\source\SourceCodeCleanArchi\01_Client\Web\Server\obj\Debug\net5.0\scopedcss\bundle\" />
+  <ContentRoot BasePath="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication" Path="C:\Users\jorge.quisbert\.nuget\packages\microsoft.aspnetcore.components.webassembly.authentication\5.0.10\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/MudBlazor" Path="C:\Users\jorge.quisbert\.nuget\packages\mudblazor\5.1.5\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/MudBlazor.ThemeManager" Path="C:\Users\jorge.quisbert\.nuget\packages\mudblazor.thememanager\1.0.5\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Syncfusion.Blazor" Path="C:\Users\jorge.quisbert\.nuget\packages\syncfusion.blazor\19.3.0.45\build\..\staticwebassets\" />
+</StaticWebAssets>

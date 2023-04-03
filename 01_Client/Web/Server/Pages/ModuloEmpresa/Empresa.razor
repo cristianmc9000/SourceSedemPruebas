@@ -1,0 +1,144 @@
+﻿@page "/ModuloEmpresa/GestionarEmpresas"
+@using Infraestructura.Models.ModuloEmpresa
+@inherits MainBaseComponent
+@layout MainLayout
+
+<MudExpansionPanels MultiExpansion="true">
+    <MudExpansionPanel Text="GESTIÓN DE EMPRESAS" MaxHeight="800">
+        <div>
+            <MudCard>
+                <EditForm OnValidSubmit="OnValidEmpresaNuevo" Model="_EmpresaNueva">
+                    <DataAnnotationsValidator />
+                    <MudCardContent>
+                        <MudGrid>
+                            <MudItem sx="12" sm="6" md="6">
+                                <MudText Typo="Typo.caption" Style="margin-left:15px"><strong>Nombre(s)</strong></MudText>
+                                <MudTextField Required="true" @bind-Value="_EmpresaNueva.Nombre"  For="@(() => _EmpresaNueva.Nombre)" MaxLength="20" Variant="Variant.Outlined" Margin="Margin.Dense"></MudTextField>
+                            </MudItem>
+                            <MudItem sx="12" sm="6" md="6">
+                                <MudText Typo="Typo.caption" Style="margin-left:15px"><strong>Sede</strong></MudText>
+                                <MudSelect T="string" Variant="Variant.Outlined" AnchorOrigin="Origin.BottomCenter" @bind-Value="_EmpresaNueva.Departamento" For="@(() => _EmpresaNueva.Departamento)">
+                                    <MudSelectItem T="string" Value="@("La Paz")" />
+                                    <MudSelectItem T="string" Value="@("Cochabamba")" />
+                                    <MudSelectItem T="string" Value="@("Santa Cruz")" />
+                                    <MudSelectItem T="string" Value="@("Sucre")" />
+                                    <MudSelectItem T="string" Value="@("Tarija")" />
+                                    <MudSelectItem T="string" Value="@("Oruro")" />
+                                    <MudSelectItem T="string" Value="@("Potosí")" />
+                                    <MudSelectItem T="string" Value="@("Pando")" />
+                                    <MudSelectItem T="string" Value="@("Beni")" />
+                                </MudSelect>
+                            </MudItem>
+                        </MudGrid>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Outlined" Color="Color.Success">Guardar</MudButton>
+                    </MudCardActions>
+                </EditForm>
+            </MudCard>
+
+            <MudCard>
+                <MudTable Items="@listaempresas" Filter="new Func<PruebaEmpresaDto, bool>(FilterFunc1)" Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped">
+                    <ToolBarContent>
+                        <MudSpacer />
+                        <MudTextField @bind-Value="searchText" Placeholder="Buscar..." Adornment="Adornment.Start" AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+                    </ToolBarContent>
+                    <HeaderContent>
+                        <MudTh><MudTableSortLabel SortBy="new Func<PruebaEmpresaDto, object>(x=>x.IdEmpresa)">ID</MudTableSortLabel></MudTh>
+                        <MudTh><MudTableSortLabel SortBy="new Func<PruebaEmpresaDto, object>(x=>x.Nombre)">Nombre</MudTableSortLabel></MudTh>
+                        <MudTh><MudTableSortLabel SortBy="new Func<PruebaEmpresaDto, object>(x=>x.Departamento)">Departamento</MudTableSortLabel></MudTh>
+                        <MudTh>Opciones</MudTh>
+                    </HeaderContent>
+                    <RowTemplate>
+                        <MudTd Style="width:40px">
+                            <MudLink Typo="Typo.caption">@context.IdEmpresa</MudLink><br />
+                        </MudTd>
+                        <MudTd>
+                            <MudLink Typo="Typo.caption">@context.Nombre</MudLink><br />
+                        </MudTd>
+                        <MudTd>
+                            <MudLink Typo="Typo.caption">@context.Departamento</MudLink><br />
+                        </MudTd>
+                        <MudTd>
+                            <div class="d-flex">
+                                <div class="m-auto">
+                                    <MudTooltip Text="Editar" Color="Color.Secondary" Placement="Placement.Top">
+                                        <MudIconButton Color="Color.Warning" Variant="Variant.Filled" Icon="@Icons.Material.Filled.Edit" Size="Size.Small" OnClick="@(()=>ShowBtnEdit(context.IdEmpresa))" /><MudText Typo="Typo.caption"></MudText>
+                                    </MudTooltip>
+                                    <MudTooltip Text="Eliminar" Color="Color.Default" Placement="Placement.Top">
+                                        <MudIconButton Color="Color.Error" Variant="Variant.Filled" Icon="@Icons.Material.Filled.Delete" Size="Size.Small" OnClick="@(()=>ShowBtnEliminaEmpresa(context.IdEmpresa))" /><MudText Typo="Typo.caption"></MudText>
+                                    </MudTooltip>
+                                </div>
+                            </div>
+                        </MudTd>
+                    </RowTemplate>
+                    <PagerContent>
+                        <MudTablePager />
+                    </PagerContent>
+                    <ChildRowContent>
+                        @if (context.VerDetalle)
+                        {
+                            <MudTr>
+                                <td colspan="5" style="padding:1px; margin:1px;">
+                                    <MudCard>
+                                        <MudCardHeader Class="pt-2 pb-2" Style="background:#eaeaea">
+                                            <CardHeaderContent>
+                                                <MudText Typo="Typo.caption"><strong>Registro Nro.: @context.IdEmpresa</strong></MudText>
+                                            </CardHeaderContent>
+                                        </MudCardHeader>
+                                        <MudCardContent Class="pa-2">
+                                            <MudGrid>
+                                                <MudItem xs="12" sm="6" md="6">
+                                                    <MudTextField @bind-Value="context.Nombre" Label="Nombre Empresa" Variant="Variant.Text"></MudTextField>
+                                                </MudItem>
+                                                <MudItem sx="12" sm="6" md="6">
+                                                    <MudSelect T="string" Variant="Variant.Outlined" AnchorOrigin="Origin.BottomCenter" @bind-Value="context.Departamento" For="@(() => context.Departamento)">
+                                                        <MudSelectItem T="string" Value="@("La Paz")" />
+                                                        <MudSelectItem T="string" Value="@("Cochabamba")" />
+                                                        <MudSelectItem T="string" Value="@("Santa Cruz")" />
+                                                        <MudSelectItem T="string" Value="@("Sucre")" />
+                                                        <MudSelectItem T="string" Value="@("Tarija")" />
+                                                        <MudSelectItem T="string" Value="@("Oruro")" />
+                                                        <MudSelectItem T="string" Value="@("Potosí")" />
+                                                        <MudSelectItem T="string" Value="@("Pando")" />
+                                                        <MudSelectItem T="string" Value="@("Beni")" />
+                                                    </MudSelect>
+                                                </MudItem>
+
+                                            </MudGrid>
+                                        </MudCardContent>
+                                        <MudCardActions>
+                                            <MudGrid>
+                                                <MudItem Class="d-flex ml-auto">
+                                                    <div class="ml-2">
+                                                        <MudButton Variant="Variant.Outlined" Color="Color.Success" OnClick="@(()=>EditEmpresa(context))">Guardar</MudButton>
+                                                        <MudButton Variant="Variant.Outlined" Color="Color.Error" OnClick="@(()=>ShowBtnEditCancelEmpresa(context.IdEmpresa))">Cerrar</MudButton>
+                                                    </div>
+                                                </MudItem>
+                                            </MudGrid>
+                                        </MudCardActions>
+                                    </MudCard>
+                                </td>
+                            </MudTr>
+                        }
+                    </ChildRowContent>
+                </MudTable>
+            </MudCard>
+
+        </div>
+    </MudExpansionPanel>
+</MudExpansionPanels>
+
+@code {
+    //private Empresa _EmpresaNueva = new Empresa();
+
+    private void OnValidEmpresaNuevo()
+    {
+        // Imprimir el valor de _EmpresaNueva.Departamento en la consola
+        Console.WriteLine(_EmpresaNueva.Departamento);
+
+        // Resto del código
+
+    }
+}
+

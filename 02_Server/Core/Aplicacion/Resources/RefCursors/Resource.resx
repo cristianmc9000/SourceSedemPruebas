@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="admsrv_beneficiario" xml:space="preserve">
+    <value>admsrv_beneficiario</value>
+    <comment>Listado de beneficiarios activos y registrados</comment>
+  </data>
+  <data name="admsrv_extractouninetreg" xml:space="preserve">
+    <value>admsrv_extractouninetreg</value>
+    <comment>Lista de todos los extractos uninet REGISTRADOS por APROBAR</comment>
+  </data>
+  <data name="admsrv_extractouninetverifc" xml:space="preserve">
+    <value>admsrv_extractouninetverifc</value>
+    <comment>Lista de extractos verificados</comment>
+  </data>
+  <data name="admsrv_persona" xml:space="preserve">
+    <value>admsrv_persona</value>
+    <comment>Consulta que trae datos de la persona segun institucion</comment>
+  </data>
+  <data name="pldsrvcmb_planilla" xml:space="preserve">
+    <value>pldsrvcmb_planilla</value>
+    <comment>Lista de planillas aprobadas para el registro de pagos</comment>
+  </data>
+  <data name="pldsrv_facturaanulada" xml:space="preserve">
+    <value>pldsrv_facturaanulada</value>
+    <comment>lista de facturas anuladas</comment>
+  </data>
+  <data name="pldsrv_facturadosificacion" xml:space="preserve">
+    <value>pldsrv_facturadosificacion</value>
+  </data>
+  <data name="pldsrv_facturareg" xml:space="preserve">
+    <value>pldsrv_facturareg</value>
+  </data>
+  <data name="pldsrv_facturavalidareg" xml:space="preserve">
+    <value>pldsrv_facturavalidareg</value>
+    <comment>Obtiene resultado de la numeacion de factura y la fecha de emision  de factura para su registro</comment>
+  </data>
+  <data name="pldsrv_planilladet_ben" xml:space="preserve">
+    <value>pldsrv_planilladet_ben</value>
+    <comment>Verifica que un beneficiario no este activo o en estado de registro para no duplicar la informacion</comment>
+  </data>
+  <data name="pldsrv_planilladet_per" xml:space="preserve">
+    <value>pldsrv_planilladet_per</value>
+    <comment>detalle de planillas por persona validacion parara registro</comment>
+  </data>
+  <data name="pldsrv_planillanegativa" xml:space="preserve">
+    <value>pldsrv_planillanegativa</value>
+    <comment>Lista de planillas negativas para pago</comment>
+  </data>
+  <data name="pldsrv_planillapago" xml:space="preserve">
+    <value>pldsrv_planillapago</value>
+    <comment>Detalle de planillas pagadas</comment>
+  </data>
+  <data name="pldsrv_planillas" xml:space="preserve">
+    <value>pldsrv_planillas</value>
+  </data>
+  <data name="pldsrv_planillasporpagar" xml:space="preserve">
+    <value>pldsrv_planillasporpagar</value>
+    <comment>lista de planillas por  aprobar</comment>
+  </data>
+  <data name="subsrv_subplanificacion" xml:space="preserve">
+    <value>subsrv_subplanificacion</value>
+    <comment>lista de registros planificacion</comment>
+  </data>
+  <data name="subsrv_subplanificaciondetalle" xml:space="preserve">
+    <value>subsrv_subplanificaciondetalle</value>
+    <comment>Lista de detalle de planificacion</comment>
+  </data>
+  <data name="subsrv_subplanificacionhijo" xml:space="preserve">
+    <value>subsrv_subplanificacionhijo</value>
+    <comment>Lista de hijos apartir de una planificacion</comment>
+  </data>
+  <data name="subsrv_subplanificacionplanilla" xml:space="preserve">
+    <value>subsrv_subplanificacionplanilla</value>
+    <comment>Lista de registro de planificaciones prental y lactancia por institucion</comment>
+  </data>
+  <data name="subsrv_subplanificacionplanillaapr" xml:space="preserve">
+    <value>subsrv_subplanificacionplanillaapr</value>
+    <comment>List de palnillas aprobadas detalle</comment>
+  </data>
+  <data name="subsrv_subtitularbeneficiarioliberado" xml:space="preserve">
+    <value>subsrv_subtitularbeneficiarioliberado</value>
+    <comment>lista de beneficiarios para su liberacion</comment>
+  </data>
+  <data name="subsrv_subtitularliberado" xml:space="preserve">
+    <value>subsrv_subtitularliberado</value>
+    <comment>Lista de titular liberados por institucion</comment>
+  </data>
+  <data name="subsrv_titularforbeneficiario" xml:space="preserve">
+    <value>subsrv_titularforbeneficiario</value>
+    <comment>Obtiene un titular registrado en la sucursal actual por su cedula de identidad</comment>
+  </data>
+</root>

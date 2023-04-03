@@ -1,0 +1,14 @@
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\bin\Debug\net5.0\Infraestructura.deps.json
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\bin\Debug\net5.0\Infraestructura.dll
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\bin\Debug\net5.0\ref\Infraestructura.dll
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\bin\Debug\net5.0\Infraestructura.pdb
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.csproj.AssemblyReference.cache
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.Resources.Pages.Autentication.Resource.resources
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.csproj.GenerateResource.cache
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.GeneratedMSBuildEditorConfig.editorconfig
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.AssemblyInfoInputs.cache
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.AssemblyInfo.cs
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.csproj.CoreCompileInputs.cache
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.dll
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\ref\Infraestructura.dll
+D:\source\SourceCodeCleanArchi\01_Client\Web\Infraestructura\obj\Debug\net5.0\Infraestructura.pdb

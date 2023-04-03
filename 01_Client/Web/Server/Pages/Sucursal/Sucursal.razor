@@ -1,0 +1,130 @@
+﻿@page "/Sucursal/Sucursal"
+@using Aplicacion.DTOs.Sucursal
+@using Infraestructura.Models
+@inherits MainBaseComponent
+@layout MainLayout
+@inject IJSRuntime JSRuntime
+
+<MudExpansionPanels>
+
+    <MudExpansionPanel>
+        <MudCard>
+            <EditForm OnValidSubmit="SucursalNuevo" Model="_SucursalNuevo">
+                <DataAnnotationsValidator />
+                <MudCardContent>
+                    <MudGrid>
+                        <MudItem xs="12" sm="6" md="6">
+                            <MudTextField @bind-Value="_SucursalNuevo.DireccionSucursal" For="@(() => _SucursalNuevo.DireccionSucursal)" Label="Detalle Sucursal" Variant="Variant.Outlined" Margin="Margin.Dense"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="6" md="6">
+                            <MudTextField @bind-Value="_SucursalNuevo.NombreSucursal" For="@(() => _SucursalNuevo.NombreSucursal)" Label="Nombre Sucursal" Variant="Variant.Outlined" Margin="Margin.Dense"></MudTextField>
+                        </MudItem>
+
+
+                    </MudGrid>
+                </MudCardContent>
+
+                <MudCardActions>
+
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Success">Guardar</MudButton>
+                </MudCardActions>
+
+                @* </DataAnnotationsValidator>*@
+            </EditForm>
+
+        </MudCard>
+
+
+        <MudCard>
+            <MudTable Items="@sucursal" Dense="@dense" Hover="@hover" Bordered="@bordered" Striped="@striped">
+
+
+                <HeaderContent>
+                    <MudTh><MudTableSortLabel SortBy="new Func<FcSucursalDto, object>(x=>x.IdfcSucursal)"> Nr°</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortBy="new Func<FcSucursalDto, object>(x=>x.DireccionSucursal)">Dirección</MudTableSortLabel></MudTh>
+                    <MudTh><MudTableSortLabel SortBy="new Func<FcSucursalDto, object>(x=>x.NombreSucursal)">Sucursal</MudTableSortLabel></MudTh>
+
+                    <MudTh>OPCIONES</MudTh>
+                </HeaderContent>
+                <RowTemplate>
+                    <MudTd Style="width:40px">
+                        <MudText Typo="Typo.caption">@context.IdfcSucursal</MudText><br />
+                    </MudTd>
+                    <MudTd>
+                        <MudText Typo="Typo.caption">@context.DireccionSucursal</MudText><br />
+                    </MudTd>
+                    <MudTd>
+                        <MudText Typo="Typo.caption">@context.NombreSucursal</MudText><br />
+                    </MudTd>
+
+
+
+                    <MudTd>
+                        <div class="d-flex">
+                            <div class="m-auto">
+
+                                <MudTooltip Text="Editar" Color="Color.Secondary" Placement="Placement.Top">
+                                    <MudFab Color="Color.Secondary" Style="@($"background:{Colors.Cyan.Darken3};")" StartIcon="@Icons.Material.Filled.Edit" Variant="Variant.Filled" Icon="@Icons.Material.Filled.Edit" Size="Size.Small" OnClick="@(() => ShowBtnEditSave(context.IdfcSucursal))" /><MudText Typo="Typo.caption"></MudText>
+                                </MudTooltip>
+                                <MudTooltip Text="Eliminar" Color="Color.Secondary" Placement="Placement.Top">
+                                    <MudFab Color="Color.Secondary" Style="@($"background:{Colors.Red.Accent4};")" StartIcon="@Icons.Material.Filled.Delete" Variant="Variant.Filled" Icon="@Icons.Material.Filled.Delete" Size="Size.Small" OnClick="@(() => Eliminar(context.IdfcSucursal))" /><MudText Typo="Typo.caption"></MudText>
+                                </MudTooltip>
+
+
+                            </div>
+                        </div>
+
+                    </MudTd>
+                </RowTemplate>
+                <PagerContent>
+                    <MudTablePager />
+                </PagerContent>
+                <ChildRowContent>
+                    @if (context.VerDetalle)
+                    {
+                        <MudTr>
+                            <td colspan="4" style="padding:1px; margin:1px">
+
+
+                                <MudCard>
+                                    <MudCardHeader Class="pt-2 pb-2" Style="background:#eaeaea">
+                                        <CardHeaderContent>
+                                            <MudText Typo="Typo.caption"><strong>Id:@context.IdfcSucursal</strong></MudText>
+                                        </CardHeaderContent>
+                                    </MudCardHeader>
+                                    <MudCardContent Class="pa-2">
+                                        <MudGrid>
+                                            <MudItem xs="12" sm="6" md="4">
+                                                <MudTextField @bind-Value="context.DireccionSucursal" Label="Direccion" Variant="Variant.Outlined" Margin="Margin.Dense"></MudTextField>
+                                            </MudItem>
+                                            <MudItem xs="12" sm="6" md="4">
+                                                <MudTextField @bind-Value="context.NombreSucursal" Label="Sucursal" Variant="Variant.Outlined" Margin="Margin.Dense"></MudTextField>
+                                            </MudItem>
+
+
+                                        </MudGrid>
+                                    </MudCardContent>
+                                    <MudCardActions>
+                                        <MudGrid>
+                                            <MudItem Class="d-flex ml-auto">
+                                                <div class="ml-2">
+                                                    <MudButton Variant="Variant.Outlined" Color="Color.Success" OnClick="@(() =>ShowBtnEditSave(context))">Guardar</MudButton>
+                                                    <MudButton Variant="Variant.Outlined" Color="Color.Error" OnClick="@(() =>ShowBtnEditSaveCancel(context.IdfcSucursal,context))">Cancelar</MudButton>
+                                                </div>
+                                            </MudItem>
+                                        </MudGrid>
+                                    </MudCardActions>
+                                </MudCard>
+
+                            </td>
+                        </MudTr>
+                    }
+                </ChildRowContent>
+            </MudTable>
+        </MudCard>
+
+
+
+    </MudExpansionPanel>
+
+</MudExpansionPanels>
